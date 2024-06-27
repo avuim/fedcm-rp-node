@@ -36,7 +36,9 @@ export const displayProfile = profile => {
 
 export const _fetch = async (path, payload = '') => {
   const headers = {
-    'X-Requested-With': 'XMLHttpRequest'
+    'X-Requested-With': 'XMLHttpRequest',
+    'Access-Control-Allow-Origin': 'https://fedcm-rp-demo.glitch.me',
+    'Access-Control-Allow-Credentials': 'true'
   }
   if (payload && !(payload instanceof FormData)) {
     headers['Content-Type'] = 'application/json'
